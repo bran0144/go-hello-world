@@ -5,7 +5,7 @@ import (
 )
 
 func main() {
-	myCourses := make([]string, 5, 10)
+	myCourses := []string{"Docker", "Puppet", "Python"}
 
 	fmt.Printf("Length is %d. \nCapacity is: %d", len(myCourses), cap(myCourses))
 }
