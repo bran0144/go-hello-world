@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	"reflect"
 )
 
 // var (
@@ -15,12 +14,17 @@ import (
 
 func main() {
 	name := "Nigel"
-	// course := "Docker Deep Dive"
-	module := 3.2
-	ptr := &module
+	course := "Docker Deep Dive"
 
-	fmt.Println("Name is set to", name, "and is of type", reflect.TypeOf(name))
-	fmt.Println("Module is set to", module, "and is of type", reflect.TypeOf(module))
-	fmt.Println("Memtory address of *module* variable is", ptr, "and the value of *module* is", *ptr)
+	fmt.Println("\nHi", name, "you're currently watching", course)
 
+	changeCourse(course)
+
+	fmt.Println("\nYou are now watching course", course)
+}
+
+func changeCourse(course string) string {
+	course = "First look: Native Docker Clustering"
+	fmt.Println("\nTrying to change your course to", course)
+	return course
 }
