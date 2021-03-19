@@ -5,12 +5,11 @@ import (
 )
 
 func main() {
-	mySlice := []int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
+	mySlice := make([]int, 1, 4)
+	fmt.Printf("Length is %d Capacity is: %d", len(mySlice), cap(mySlice))
 
-	fmt.Println(mySlice[4])
-	mySlice[1] = 0
-	fmt.Println(mySlice)
-
-	sliceOfSlice := mySlice[2:5]
-	fmt.Println(sliceOfSlice)
+	for i := 1; i < 17; i++ {
+		mySlice = append(mySlice, i)
+		fmt.Printf("\nCapacity is: %d", cap(mySlice))
+	}
 }
