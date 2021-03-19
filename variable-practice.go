@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"os"
 )
 
 // var (
@@ -13,7 +14,7 @@ import (
 // )
 
 func main() {
-	name := "Nigel"
+	name := os.Getenv("USERNAME")
 	course := "Docker Deep Dive"
 
 	fmt.Println("\nHi", name, "you're currently watching", course)
