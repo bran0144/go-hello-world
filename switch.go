@@ -2,18 +2,20 @@ package main
 
 import (
 	"fmt"
+	"math/rand"
+	"time"
 )
 
 func main() {
 
-	switch "docker" {
-	case "linux":
-		fmt.Println("here are some recommended Linux courses")
-	case "docker":
-		fmt.Println("here are some recommended Docker courses")
-	case "windows":
-		fmt.Println("here are some recommended Windows courses")
-	default:
-		fmt.Println("sorry we couldn't find a match. Why not try our Top 100 list?")
+	switch tempNum := random(); tempNum {
+	case 0, 2, 4, 6, 8:
+		fmt.Println("We got an even numter -", tempNum)
+	case 1, 3, 5, 7, 9:
+		fmt.Println("We got an odd numter -", tempNum)
 	}
+}
+func random() int {
+	rand.Seed(time.Now().Unix())
+	return rand.Intn(10)
 }
