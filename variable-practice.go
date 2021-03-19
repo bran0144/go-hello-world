@@ -17,8 +17,10 @@ func main() {
 	name := "Nigel"
 	// course := "Docker Deep Dive"
 	module := 3.2
+	ptr := &module
 
 	fmt.Println("Name is set to", name, "and is of type", reflect.TypeOf(name))
 	fmt.Println("Module is set to", module, "and is of type", reflect.TypeOf(module))
+	fmt.Println("Memtory address of *module* variable is", ptr, "and the value of *module* is", *ptr)
 
 }
