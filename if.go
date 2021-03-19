@@ -5,10 +5,8 @@ import (
 )
 
 func main() {
-	firstRank := "39"
-	secondRank := "614"
 
-	if firstRank < secondRank {
+	if firstRank, secondRank := 39, 614; firstRank < secondRank {
 		fmt.Println("\nFirst course is doing better" + " than second course")
 	} else if firstRank > secondRank {
 		fmt.Println("\nYour first" + "course must be doing abysmally!")
