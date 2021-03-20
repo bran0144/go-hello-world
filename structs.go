@@ -20,5 +20,5 @@ func main() {
 		Level:  "Intermediate",
 		Rating: 5,
 	}
-	fmt.Println(DockerDeepDive)
+	fmt.Println("\nDocker Deep Dive author is:", DockerDeepDive.Author)
 }
